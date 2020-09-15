@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "cd client && yarn install && yarn run build:$ENVIRONMENT"
+    "heroku-postbuild": "echo $ENVIRONMENT && cd client && yarn install && yarn run build:$ENVIRONMENT"
   },
   "keywords": [],
   "author": "",
