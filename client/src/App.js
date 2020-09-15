@@ -1,8 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import axios from 'axios'
+import logo from './logo.svg'
+import './App.css'
 
 function App() {
+  useEffect(() => {
+    axios.get('/api')
+  }, [])
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +24,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
